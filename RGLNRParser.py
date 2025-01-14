@@ -53,10 +53,10 @@ class TraxpayScraper:
         try:
             wait = WebDriverWait(self.driver, 20)
         
-            wait.until(EC.presence_of_element_located((By.ID, 'invoiceDtoLazyListModel:j_id_ih')))
-            wait.until(EC.element_to_be_clickable((By.ID, 'invoiceDtoLazyListModel:j_id_ih')))
+            wait.until(EC.presence_of_element_located((By.ID, 'invoiceDtoLazyListModel:j_id_g5')))
+            wait.until(EC.element_to_be_clickable((By.ID, 'invoiceDtoLazyListModel:j_id_g5')))
         
-            order_by_element = self.driver.find_element(By.ID, 'invoiceDtoLazyListModel:j_id_ih')
+            order_by_element = self.driver.find_element(By.ID, 'invoiceDtoLazyListModel:j_id_g5')
         
             self.driver.execute_script("arguments[0].click();", order_by_element)
             time.sleep(2)
@@ -66,10 +66,10 @@ class TraxpayScraper:
             time.sleep(2)
             self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             time.sleep(1)
-            self.driver.find_element(By.XPATH, '//*[@id="invoiceDtoLazyListModel:j_id_jy"]/div[3]').click()
+            self.driver.find_element(By.XPATH, '//*[@id="invoiceDtoLazyListModel:j_id_hm"]/div[3]').click()
             print('Status auf Alle gesetzt.')
             time.sleep(1)
-            self.driver.find_element(By.XPATH, '//*[@id="invoiceDtoLazyListModel:j_id_jy_panel"]/div[1]/div/div[2]/span').click()
+            self.driver.find_element(By.XPATH, '//*[@id="invoiceDtoLazyListModel:j_id_hm_panel"]/div[1]/div/div[2]/span').click()
             time.sleep(2)
             dropdown_element = self.driver.find_element(By.ID, 'invoiceDtoLazyListModel:j_id__v_1') 
         
